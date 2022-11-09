@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.test</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>test</name>
+        <script><![CDATA[var test = Class.create();
+test.prototype = {
+    initialize: function() {
+    },
+
+    type: 'test'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 09:47:29</sys_created_on>
+        <sys_id>362ab43597c71110f1f37c80f053af79</sys_id>
+        <sys_name>test</sys_name>
+        <sys_package display_value="github" source="ce7ed07997471110f1f37c80f053af34">ce7ed07997471110f1f37c80f053af34</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="github">ce7ed07997471110f1f37c80f053af34</sys_scope>
+        <sys_update_name>sys_script_include_362ab43597c71110f1f37c80f053af79</sys_update_name>
+    </sys_script_include>
+</record_update>
