@@ -1,16 +1,19 @@
 jobs:
-  get-job-id: 
-    runs-on: ubuntu-latest
-    name: 'SET-A-NEW-NAME' # change SET-A-NEW-NAME
+  my-job:
+    name: OS ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-18.04
+          - ubuntu-20.04
     steps:
-    - name: set id
-      id: set-job-id
-      uses: ayachensiyuan/get-action-job-id@v1.6
-      env: 
-    	  SN_TOKEN: ${{ secrets.SN_TOKEN }}
-      with:
-        job-name: 'SET-A-NEW-NAME' # must be the same as 'get-job-id.name' 
+      - run: echo ${{ github.job }} # Will only return the job_id: "my-job"
+      - run: |
+          JOB_NAME="OS ${{ matrix.os }}"
+          echo $JOB_NAME
+          echo "JOB_NAME=$JOB_NAME" >> $GITHUB_ENV
 
-    # get id     
-    - name: get id
-      run: echo "The current job id is ${{ steps.set-job-id.outputs.jobId }}"
+      - name: Print JOB_NAME
+        run: |
+          echo "JOB NAME:" ${{ env.JOB_NAME }}
