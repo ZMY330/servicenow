@@ -22,7 +22,6 @@ jobs:
         env:
           nowUsername: ${{ secrets.SN_USERNAME }}
           nowPassword: ${{ secrets.SN_PASSWORD }}
-          instance-url: ${{ secrets.SN_INSTANCE_URL }}
           nowSourceInstance: ${{ secrets.SN_DEV_INSTANCE }}
           appSysID: ${{ secrets.SN_APP_SYSID }}
 
@@ -37,7 +36,6 @@ jobs:
         env:
           nowUsername: ${{ secrets.SN_USERNAME }}
           nowPassword: ${{ secrets.SN_PASSWORD }}
-          instance-url: ${{ secrets.SN_INSTANCE_URL }}
           nowSourceInstance: ${{ secrets.SN_DEV_INSTANCE }}
           appSysID: ${{ secrets.SN_APP_SYSID }}
           
