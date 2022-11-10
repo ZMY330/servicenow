@@ -76,7 +76,7 @@ jobs:
         env:
           nowUsername: ${{ secrets.SN_USERNAME }}
           nowPassword: ${{ secrets.SN_PASSWORD }}
-          nowInstallInstance: ${{ secrets.SN_TEST_INSTANCE }}
+          instance-url: ${{ secrets.SN_INSTANCE_URL }}
           appSysID: ${{ secrets.SN_APP_SYSID }}
 
       - name: ServiceNow CI/CD Run ATF Test Suite
