@@ -1,0 +1,37 @@
+日语全角字符到半角字符（U+FF00-FFEF）的转换器功能。
+function toHalfWidth(input) {
+return str.replace(/[Ａ-Ｚａ-ｚ０-９！-～]/g, function(s){
+return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+});
+}
+ char[] chars_test1 = test1.toCharArray();
+        for (int i = 0; i < chars_test1.length; i++) {
+            String temp = String.valueOf(chars_test1[i]);
+            // 判断是全角字符
+            if (temp.matches("[^\\x00-\\xff]")) {
+               System.out.println("全角   " + temp);
+            }
+            // 判断是半角字符
+            else {
+               System.out.println("半角    " + temp);
+            }
+        }
+
+
+var contractGr = new GlideRecord('ast_contract');
+contractGr.initialize();
+
+var rec = new GlideRecord('question_answer');
+rec.addQuery('table_sys_id', tableSysId);
+rec.query();
+while(rec.next()){
+
+	if(rec.question.getDisplayValue() == 'Name')
+		contractGr.u_name = rec.value;
+	if(rec.question.getDisplayValue() == 'Email')
+		contractGr.u_email = rec.value;
+}
+
+var sysId = contractGr.insert();
+outputs.sysId = sysId;
+null
