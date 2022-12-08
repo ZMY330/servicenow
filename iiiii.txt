@@ -1,1 +1,0 @@
-var currentDate = new GlideDateTime();var currentDate = new GlideDateTime();null
