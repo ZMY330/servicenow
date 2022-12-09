@@ -1,0 +1,2 @@
+user_name,name,email,active,first_name,last_name,department,group
+admin,System Administrator,admin@example.com,TRUE,System,Administrator,Finance,Hardware
