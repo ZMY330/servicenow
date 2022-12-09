@@ -1,0 +1,77 @@
+当用户更新记录时，查询另一个表里是否存在某条记录？有则插入，没有则需弹一个alert
+
+onSubmit:
+--------------------
+
+function onSubmit() {
+    if (g_scratchpad.can_insert) {
+        return true;
+    }
+
+    var actionName = g_form.getActionName();
+    var ga = new GlideAjax('global.sampleUtils');
+    ga.addParam('sysparm_name', 'getUserDetails');
+    ga.addParam('userId', g_form.getUniqueValue());
+    ga.getXMLAnswer(function (res) {
+        //g_form.addInfoMessage("workd");
+        if (res == 'true') {
+            alert("you can insert");
+            g_scratchpad.can_insert = true;
+            g_form.submit(actionName);
+            return;
+        }
+        if (res == 'false') {
+            alert("you cannot insert");
+			g_scratchpad.can_insert = false;
+            return;
+        }
+    });
+
+    return false;
+}
+-----------------------------------------------------------------------------------
+
+Script Include:
+--------------------
+
+var sampleUtils = Class.create();
+
+	sampleUtils.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+
+	getUserDetails: function(){
+		//gs.addInfoMessage('script include triggered');
+		var temp=false;
+		var Id = this.getParameter('userId');
+		var gr = new GlideRecord("u_child_test");
+        gr.addQuery('u_project', Id);
+        gr.addQuery('u_name', "1234");
+		gr.query();
+        gs.info("count=====" + gr.getRowCount());
+        if (gr.next()) {
+            temp=true;
+		}
+		gs.info(temp);
+        return temp;
+	},
+
+    type: 'sampleUtils'
+});
+
+当用户更新related list中的记录时，查询另一个表里是否存在某条记录？有则插入，没有则需弹一个alert
+
+function onCellEdit(sysIDs, table, oldValues, newValue, callback) {
+    //Type appropriate comment here, and begin script below
+    var ga = new GlideAjax('global.sampleUtils');
+    ga.addParam('sysparm_name', 'getUserDetails');
+    ga.addParam('userId', g_form.getUniqueValue());
+    ga.getXMLAnswer(function(answer) {
+        if (answer == 'true') {
+            alert('allowed');
+            callback(true);
+        } else {
+            alert('not allowed');
+            callback(false);
+        }
+    });
+}
+
