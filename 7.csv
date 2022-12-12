@@ -1,0 +1,18 @@
+function toHalfWidth(input) {
+return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+}
+        for (int i = 0; i < chars_test1.length; i++) {
+            // 判断是全角字符
+               System.out.println("全角   " + temp);
+            // 判断是半角字符
+               System.out.println("半角    " + temp);
+        }
+
+contractGr.initialize();
+var rec = new GlideRecord('question_answer');
+rec.query();
+
+		contractGr.u_name = rec.value;
+		contractGr.u_email = rec.value;
+
+outputs.sysId = sysId;
