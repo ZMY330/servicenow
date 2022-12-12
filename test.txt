@@ -1,0 +1,9 @@
+1 改变label颜色： 
+function onLoad() {
+ //Set Incident Status Color
+ var stateLabel = g_form.getLabel('incident.state');//incident 为表名，state为字段名
+ var stateValue = g_form.getValue('incident.state');
+ if (stateValue == '4') {
+stateLabel.style.color= 'yellow';
+stateLabel.style.fontWeight='bold';
+ }
