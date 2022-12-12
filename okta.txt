@@ -1,0 +1,8 @@
+https://docomo-lamp.okta.com/app/exk3ejappbeFAPuPi697/sso/saml/metadata
+
+
+
+
+https://docomo-lamp.okta.com/
+
+James@825930
