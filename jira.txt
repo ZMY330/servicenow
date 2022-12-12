@@ -1,0 +1,259 @@
+RSLIJPGNEwbvs2NYx1jY1CE0
+
+
+
+Retrieve User information from incoming JSON 
+2) Make JIRA REST API call to check user's authenticity
+ 3) Deny or allow further processing based on result
+
+outbound webhooks in Jira don't support authentication, but your SRAPI is expecting authentication
+
+
+curl --location --request POST 'https://dev113465.service-now.com/api/740461/jiratosnow' \
+--header 'id: 1233433' \
+--header 'Authorization: Basic d3V5YW5nMTMwN0BnbWFpbC5jb206UlNMSUpQR05Fd2J2czJOWXgxalkxQ0Uw' \
+--header 'Cookie: BIGipServerpool_dev113465=3330780938.16705.0000; JSESSIONID=087C21E54751B96C40F3913EE9611200; glide_session_store=F60CF91797A61110F1F37C80F053AFA8; glide_user_activity=U0N2M18xOm92NkVDZkxtenRPTEVwOWg1L3FZbGtKQjBTZWZtSEowQ1VLeUlINWhjNms9OlUvNXd2TEVwMkptUE1jTmEzdTErYW5iV3B6ZTlMZ05jdThZREdQcXBKQm89; glide_user_route=glide.3ede7e1af9d1adf0647531f271b6b990' \
+--data-raw ''
+
+
+{
+    "access_token": "ZI1bgyn-VHeOoTmb4JJf3_aCC1s2Q0hKXjVbJnkcgMHs-li2y1E-BhcdD_76ZZvrCSy-qWYpfLAvzeaYvRF69A",
+    "refresh_token": "jvlQg5JsD0a1vI3glFP8F-YnMnXNbhxYTml-ZoFf9fZNA8UPXX4Cgc6JVLwr2thhG3wqJ5NPKJDus7BDBCi1Bg",
+    "scope": "useraccount",
+    "token_type": "Bearer",
+    "expires_in": 1799
+}
+
+
+{
+    "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations,customfield_10010.requestTypePractice",
+    "id": "10105",
+    "self": "https://zmy1307.atlassian.net/rest/api/3/issue/10105",
+    "key": "SER-90",
+    "fields": {
+        "statuscategorychangedate": "2022-10-31T17:57:38.300+0800",
+        "customfield_10070": null,
+        "customfield_10071": null,
+        "customfield_10072": null,
+        "customfield_10073": null,
+        "customfield_10074": null,
+        "customfield_10075": null,
+        "customfield_10076": null,
+        "fixVersions": [],
+        "resolution": null,
+        "lastViewed": null,
+        "customfield_10060": null,
+        "customfield_10061": null,
+        "customfield_10062": null,
+        "customfield_10063": null,
+        "customfield_10064": [],
+        "customfield_10067": null,
+        "priority": {
+            "self": "https://zmy1307.atlassian.net/rest/api/3/priority/3",
+            "iconUrl": "https://zmy1307.atlassian.net/images/icons/priorities/medium.svg",
+            "name": "Medium",
+            "id": "3"
+        },
+        "customfield_10068": null,
+        "customfield_10069": null,
+        "labels": [],
+        "timeestimate": null,
+        "aggregatetimeoriginalestimate": null,
+        "versions": [],
+        "issuelinks": [],
+        "assignee": {
+            "self": "https://zmy1307.atlassian.net/rest/api/3/user?accountId=63490417cafc998a91d01073",
+            "accountId": "63490417cafc998a91d01073",
+            "emailAddress": "wuyang1307@gmail.com",
+            "avatarUrls": {
+                "48x48": "https://secure.gravatar.com/avatar/e8ad0c86c35056337036fc735f7f5f0f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FB-4.png",
+                "24x24": "https://secure.gravatar.com/avatar/e8ad0c86c35056337036fc735f7f5f0f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FB-4.png",
+                "16x16": "https://secure.gravatar.com/avatar/e8ad0c86c35056337036fc735f7f5f0f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FB-4.png",
+                "32x32": "https://secure.gravatar.com/avatar/e8ad0c86c35056337036fc735f7f5f0f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FB-4.png"
+            },
+            "displayName": "Betty",
+            "active": true,
+            "timeZone": "Asia/Shanghai",
+            "accountType": "atlassian"
+        },
+        "status": {
+            "self": "https://zmy1307.atlassian.net/rest/api/3/status/10000",
+            "description": "",
+            "iconUrl": "https://zmy1307.atlassian.net/",
+            "name": "To Do",
+            "id": "10000",
+            "statusCategory": {
+                "self": "https://zmy1307.atlassian.net/rest/api/3/statuscategory/2",
+                "id": 2,
+                "key": "new",
+                "colorName": "blue-gray",
+                "name": "To Do"
+            }
+        },
+        "components": [],
+        "customfield_10050": null,
+        "customfield_10051": null,
+        "customfield_10052": null,
+        "customfield_10053": null,
+        "customfield_10054": null,
+        "customfield_10055": null,
+        "customfield_10056": null,
+        "customfield_10057": null,
+        "customfield_10058": null,
+        "customfield_10059": null,
+        "customfield_10049": null,
+        "aggregatetimeestimate": null,
+        "creator": {
+            "self": "https://zmy1307.atlassian.net/rest/api/3/user?accountId=63490417cafc998a91d01073",
+            "accountId": "63490417cafc998a91d01073",
+            "emailAddress": "wuyang1307@gmail.com",
+            "avatarUrls": {
+                "48x48": "https://secure.gravatar.com/avatar/e8ad0c86c35056337036fc735f7f5f0f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FB-4.png",
+                "24x24": "https://secure.gravatar.com/avatar/e8ad0c86c35056337036fc735f7f5f0f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FB-4.png",
+                "16x16": "https://secure.gravatar.com/avatar/e8ad0c86c35056337036fc735f7f5f0f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FB-4.png",
+                "32x32": "https://secure.gravatar.com/avatar/e8ad0c86c35056337036fc735f7f5f0f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FB-4.png"
+            },
+            "displayName": "Betty",
+            "active": true,
+            "timeZone": "Asia/Shanghai",
+            "accountType": "atlassian"
+        },
+        "subtasks": [],
+        "customfield_10040": null,
+        "customfield_10041": null,
+        "customfield_10042": null,
+        "customfield_10043": null,
+        "reporter": {
+            "self": "https://zmy1307.atlassian.net/rest/api/3/user?accountId=63490417cafc998a91d01073",
+            "accountId": "63490417cafc998a91d01073",
+            "emailAddress": "wuyang1307@gmail.com",
+            "avatarUrls": {
+                "48x48": "https://secure.gravatar.com/avatar/e8ad0c86c35056337036fc735f7f5f0f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FB-4.png",
+                "24x24": "https://secure.gravatar.com/avatar/e8ad0c86c35056337036fc735f7f5f0f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FB-4.png",
+                "16x16": "https://secure.gravatar.com/avatar/e8ad0c86c35056337036fc735f7f5f0f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FB-4.png",
+                "32x32": "https://secure.gravatar.com/avatar/e8ad0c86c35056337036fc735f7f5f0f?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FB-4.png"
+            },
+            "displayName": "Betty",
+            "active": true,
+            "timeZone": "Asia/Shanghai",
+            "accountType": "atlassian"
+        },
+        "aggregateprogress": {
+            "progress": 0,
+            "total": 0
+        },
+        "customfield_10044": null,
+        "customfield_10045": null,
+        "customfield_10046": null,
+        "customfield_10047": null,
+        "customfield_10048": null,
+        "customfield_10038": null,
+        "customfield_10039": null,
+        "progress": {
+            "progress": 0,
+            "total": 0
+        },
+        "votes": {
+            "self": "https://zmy1307.atlassian.net/rest/api/3/issue/SER-90/votes",
+            "votes": 0,
+            "hasVoted": false
+        },
+        "worklog": {
+            "startAt": 0,
+            "maxResults": 20,
+            "total": 0,
+            "worklogs": []
+        },
+        "issuetype": {
+            "self": "https://zmy1307.atlassian.net/rest/api/3/issuetype/10016",
+            "id": "10016",
+            "description": "Stories track functionality or features expressed as user goals.",
+            "iconUrl": "https://zmy1307.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+            "name": "Story",
+            "subtask": false,
+            "avatarId": 10315,
+            "entityId": "a032cd6c-920d-47fa-bdf1-00846a132015",
+            "hierarchyLevel": 0
+        },
+        "timespent": null,
+        "project": {
+            "self": "https://zmy1307.atlassian.net/rest/api/3/project/10000",
+            "id": "10000",
+            "key": "SER",
+            "name": "servicenow",
+            "projectTypeKey": "software",
+            "simplified": true,
+            "avatarUrls": {
+                "48x48": "https://zmy1307.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10410",
+                "24x24": "https://zmy1307.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10410?size=small",
+                "16x16": "https://zmy1307.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10410?size=xsmall",
+                "32x32": "https://zmy1307.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10410?size=medium"
+            }
+        },
+        "aggregatetimespent": null,
+        "customfield_10035": null,
+        "customfield_10036": null,
+        "customfield_10037": [],
+        "customfield_10027": null,
+        "customfield_10028": null,
+        "customfield_10029": null,
+        "resolutiondate": null,
+        "workratio": -1,
+        "watches": {
+            "self": "https://zmy1307.atlassian.net/rest/api/3/issue/SER-90/watchers",
+            "watchCount": 1,
+            "isWatching": true
+        },
+        "issuerestriction": {
+            "issuerestrictions": {},
+            "shouldDisplay": true
+        },
+        "created": "2022-10-31T17:57:37.779+0800",
+        "customfield_10020": null,
+        "customfield_10021": null,
+        "customfield_10022": null,
+        "customfield_10023": null,
+        "customfield_10024": null,
+        "customfield_10025": null,
+        "customfield_10026": null,
+        "customfield_10016": null,
+        "customfield_10017": null,
+        "customfield_10018": {
+            "hasEpicLinkFieldDependency": false,
+            "showField": false,
+            "nonEditableReason": {
+                "reason": "PLUGIN_LICENSE_ERROR",
+                "message": "The Parent Link is only available to Jira Premium users."
+            }
+        },
+        "customfield_10019": "0|i000kv:",
+        "updated": "2022-10-31T17:57:37.779+0800",
+        "timeoriginalestimate": null,
+        "description": null,
+        "customfield_10010": null,
+        "customfield_10014": null,
+        "customfield_10015": null,
+        "timetracking": {},
+        "customfield_10005": null,
+        "customfield_10006": null,
+        "customfield_10007": null,
+        "security": null,
+        "customfield_10008": null,
+        "customfield_10009": null,
+        "attachment": [],
+        "summary": "hiososososos",
+        "customfield_10001": null,
+        "customfield_10002": null,
+        "customfield_10003": null,
+        "customfield_10004": null,
+        "environment": null,
+        "duedate": null,
+        "comment": {
+            "comments": [],
+            "self": "https://zmy1307.atlassian.net/rest/api/3/issue/10105/comment",
+            "maxResults": 0,
+            "total": 0,
+            "startAt": 0
+        }
+    }
+}
