@@ -1,0 +1,9 @@
+1.slack@ group:<!subteam^ABC123>
+2 slack@user:<@ABC123>
+
+sys_portal stores all the information of pages used in Homepage and dashboard and their sections
+sys_portal_preference is nothing but the setting for that homepage:-
+
+
+5Zhenxini.
+
