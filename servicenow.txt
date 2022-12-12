@@ -1,0 +1,11 @@
+https://accenture.webhook.office.com/webhookb2/915fe211-eb5c-48be-961d-a3ce14fd041f@e0793d39-0939-496d-b129-198edd916feb/IncomingWebhook/d789dfc3695747688c16f0196268c019/c441db53-968d-4f13-b8e6-0b242b077bbc
+https://docs.servicenow.com/bundle/quebec-servicenow-platform/page/administer/integrationhub/reference/microsoft-teams-spoke.html
+https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html
+
+
+https://developer.microsoft.com/en-us/microsoft-365/profile
+
+https://docs.servicenow.com/bundle/sandiego-servicenow-platform/page/administer/virtual-agent/task/define-va-notif-link-actions.html
+
+
+#800000
